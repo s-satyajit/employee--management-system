@@ -9,8 +9,9 @@ const AllTask = () => {
       {authData.employees.map(function (elem) {
         <div className="bg-red-400 mb-2 py-2 px-4 flex justify-between rounded">
           <h2 className="w-1/5 bg-red-600">{elem.firstName}</h2>
-          <h3 className="w-1/5 bg-red-600">Make a UI Design</h3>
+          <h2 className="w-1/5 bg-red-600">Status</h2>
           <h5 className="w-1/5 bg-red-600">Status</h5>
+          <h5 className="w-1/5 bg-red-600">Failed</h5>
         </div>;
       })}
     </div>
