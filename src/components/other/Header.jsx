@@ -1,5 +1,5 @@
 import React from "react";
-import { showSuccessToast } from "../utils/toastConfig";
+import { showSuccessToast } from "../../utils/toastConfig";
 
 const Header = ({ data, changeUser }) => {
   const logOutUser = () => {

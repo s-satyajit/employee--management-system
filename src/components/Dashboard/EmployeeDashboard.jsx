@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
-import Header from '../../other/Header'
-import TaskListNumbers from '../../other/TaskListNumbers'
+import Header from '../other/Header'
+import TaskListNumbers from '../other/TaskListNumbers'
 import TaskList from '../TaskList/TaskList'
 import { AuthContext } from '../../context/AuthProvider'
 

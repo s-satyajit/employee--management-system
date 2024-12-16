@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import { AuthContext } from "../context/AuthProvider";
-import { showSuccessToast, showErrorToast } from "../utils/toastConfig";
+import { AuthContext } from "../../context/AuthProvider";
+import { showErrorToast, showSuccessToast } from "../../utils/toastConfig";
 
 const CreateTask = () => {
   const initialState = {
