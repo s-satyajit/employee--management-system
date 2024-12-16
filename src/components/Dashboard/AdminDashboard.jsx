@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "../other/Header";
-import CreateTask from "../other/CreateTask";
-import AllTask from "../other/AllTask";
+import Header from "../../other/Header";
+import CreateTask from "../../other/CreateTask";
+import AllTask from "../../other/AllTask";
 
-const AdminDashboard = () => {
+const AdminDashboard = ({ changeUser }) => {
   return (
-    <div className="h-screen w-full p-7">
-      <Header />
+    <div className="min-h-screen bg-[#0a0a0a] p-6 md:p-10">
+      <Header changeUser={changeUser} />
       <CreateTask />
       <AllTask />
     </div>
