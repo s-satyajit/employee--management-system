@@ -4,6 +4,7 @@ import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import { getLocalStorage, setLocalStorage } from "./utils/localStorage";
 import { AuthContext } from "./context/AuthProvider";
+import { data } from "autoprefixer";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -13,7 +14,11 @@ const App = () => {
 
   // useEffect(() => {
   //   const loggedInUser = localStorage.getItem("loggedInUser");
-  //   if (loggedInUser) setUser(loggedInUser.role);
+  //   if (loggedInUser) {
+  //     const userData = JSON.parse(loggedInUser);
+  //     setUser(userData.role);
+  //     setLoggedInUserData(userData.data);
+  //   }
   // }, [authData]);
 
   const handleLogin = (email, password) => {
@@ -29,7 +34,7 @@ const App = () => {
         setLoggedInUserData(employee);
         localStorage.setItem(
           "loggedInUser",
-          JSON.stringify({ role: "employee" })
+          JSON.stringify({ role: "employee", data: employee })
         );
       }
     } else alert("Invalid Credentials");
